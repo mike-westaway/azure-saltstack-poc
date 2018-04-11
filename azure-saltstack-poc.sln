@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "azure-saltstack-poc", "azure-saltstack-poc\azure-saltstack-poc.deployproj", "{8FF8E773-C2A6-4636-895F-1C557E7F5629}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FF8E773-C2A6-4636-895F-1C557E7F5629}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FF8E773-C2A6-4636-895F-1C557E7F5629}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FF8E773-C2A6-4636-895F-1C557E7F5629}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FF8E773-C2A6-4636-895F-1C557E7F5629}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
