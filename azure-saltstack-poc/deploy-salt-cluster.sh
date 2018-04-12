@@ -11,6 +11,7 @@ clientid=""
 secret=""
 tenantid=""
 ingestionkey=""
+saltmasterdns=""
 
 while test $# -gt 0
 do
@@ -44,6 +45,9 @@ do
         ;;
     -k|--ingestionkey)
          shift ; ingestionkey=$1
+        ;;
+    -m|--saltmasterdns)
+         shift ; saltmasterdns=$1
         ;;
     esac
     shift
@@ -79,6 +83,11 @@ if [ -z "$tenantid" ]; then
   exit 0
 fi
 
+if [ -z "$saltmasterdns" ]; then
+  echo "Error: Missing Salt Master DNS (-m)".
+  exit 0
+fi
+
 function deleteCluster() {
   az group delete -n $resourceGroupName
 }
@@ -104,7 +113,8 @@ PARAMS=$(echo "{\
 \"clientid\":{\"value\":\"$clientid\"},\
 \"secret\":{\"value\":\"$secret\"},\
 \"tenantid\":{\"value\":\"$tenantid\"},\
-\"ingestionkey\":{\"value\":\"$ingestionkey\"}\
+\"ingestionkey\":{\"value\":\"$ingestionkey\"},\
+\"saltmasterdns\":{\"value\":\"$saltmasterdns\"}\
 }")
 
   echo "Creating Resource Group"
