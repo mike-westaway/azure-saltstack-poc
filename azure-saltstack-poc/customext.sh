@@ -28,4 +28,11 @@ sh $HOME/bootstrap_salt.sh -A $saltmasterdns -p python-pip git 2017.7
 #curl -s -o $HOME/requirements.txt -L https://raw.githubusercontent.com/ritazh/azure-saltstack-elasticsearch/master/requirements.txt
 #pip install -r $HOME/requirements.txt
 
+# dummy test apply
+mkdir /etc/myapp
+
+service salt-minion restart
+
+salt-call state.apply
+
 echo $(date +"%F %T%z") "ending script customext.sh"
