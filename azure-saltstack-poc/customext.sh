@@ -31,6 +31,7 @@ sh $HOME/bootstrap_salt.sh -A $saltmasterdns -p python-pip git 2017.7
 # dummy test apply
 mkdir /etc/myapp
 
+echo "restarting minion"
 service salt-minion restart
 
 salt-call state.apply
